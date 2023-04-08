@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    
+}
+
+body a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.87);
+}
+ .header svg {
+    max-height: 1rem;
+    width: 7.5rem;
+    display: flex;
+    
+}
+
+header {
+    position: fixed;
+}
+ 
+.header {
+    display: flex;
+    margin: 10px 25px; 
+    flex-flow: row wrap;
+    justify-content: space-between;
+    inline-size: 100%;
+    align-items: center;
+}
+
+.nav_linksCenter, .nav_linksRight{
+    display: none;
+} 
+.nav_menu2 {
+    display: none;
+}
+.nav_menu {
+margin-right: 2rem;
+border-radius: 5px;
+background-color: rgba(78, 78, 78, 0.123);
+height: 35px;
+width: 80px;
+display: grid;
+align-items: center;
+text-align: center;
+}
+
+
+
+                    /* images  */
+.first_car {
+    background-image: url(./small_images/teslaRed_small.jpg);
+
+}
+.first_car, .second_car, .third_car, .forth_car, .solar_panel, .solar_roof, .accessories {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    min-width: 400px;
+    
+}
+
+.second_car {
+    background-image: url(./small_images/teslaBlue_small.jpg);
+
+}
+
+.third_car {
+    background-image: url(./small_images/modelS_small.jpg);
+}
+.forth_car {
+    background-image: url(./small_images/modelX_small.jpg);
+}
+.solar_panel {
+    background-image: url(./small_images/solarPanel_small.jpg);
+}
+.solar_roof {
+    background-image: url(./small_images/solarRoof_small.jpg);
+}
+.accessories {
+    background-image: url(./small_images/accessories_small.jpg);
+}
+
+
+                /* discriptions  */
+
+.first_disc, .second_disc, .third_disc, .forth_disc, .fifth_disc, .sixth_disc, .seventh_disc {
+    display: grid;
+    justify-content: center;
+    padding-top: 15vh;
+    line-height: 40px;
+    
+}      
+.first_disc h1, .second_disc h1, .third_disc h1, .forth_disc h1, .fifth_disc h1, .sixth_disc h1, .seventh_disc h1{
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
+    
+}    
+.first_disc p, .second_disc p, .third_disc p, .forth_disc P, .fifth_disc p, .sixth_disc p {
+    letter-spacing: 1px;
+} 
+.first_disc p span, .second_disc p span, .third_disc p span, .forth_disc p span {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    
+}
+.first_disc p span:hover, .second_disc p span:hover, .third_disc p span:hover, .forth_disc p span:hover {
+    text-decoration-thickness: 2px;
+    
+}
+
+.buttons button {
+    height: 40px;
+    font-weight: bolder;
+    font-size: 14px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    word-spacing: 2px;
+    letter-spacing: 0.7px;
+    cursor: pointer;
+    
+}     
+  .btn_1 {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: rgba(0, 0, 0, 0.918);
+    color: rgba(255, 255, 255, 0.877);
+  
+}
+ .btn_2 {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: rgba(255, 255, 255, 0.562);
+    color: rgba(0, 0, 0, 0.918);
+   
+   
+}
+.col1 {
+    bottom: 10vh;
+    
+}
+
+.col1, .col2, .col3, .col4 , .col5, .col6, .col7 {
+    position: absolute;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.col2 {
+    bottom: -90vh;
+}
+.col3 {
+    bottom: -190vh;
+}
+.col4 {
+    bottom: -290vh;
+}
+.col5 {
+    bottom: -390vh;
+}
+.col6 {
+    bottom: -490vh;
+}
+
+.buttons button {
+    width: 90%;
+
+}
+.single_btn {
+    padding-top: 60vh;
+}
+
+
+.first_car i, .second_car i, .third_car i, .forth_car i, .solar_panel i, .solar_roof i{
+    display: grid;
+    position: absolute;
+    left: 50%;
+    color:  rgba(44, 44, 44, 0.856);
+    font-size: 1.5rem;
+    animation: bounce 1.5s ease-in-out infinite;
+    
+   
+}
+@keyframes bounce {
+    0% {
+        bottom: 2rem;
+    }
+    
+    50% {
+        bottom: 1rem;
+    }
+
+    100% {
+        bottom: 2rem;
+    }
+    
+}
+
+                        /* footer  */
+
+.footer_links span {
+    display: none;
+}
+
+.footer_links {
+    display:grid;
+    position: relative;
+    bottom: -77vh;
+    justify-content: center;
+    text-align: center;
+    left: 0%;
+    right: 0%;
+    margin: auto;
+    row-gap: 1rem;
+    padding-bottom: 50px;
+
+    
+}
+.footer_links a {
+    color: rgba(0, 0, 0, 0.753);
+    font-size: 13px;
+}
+
+
+@media screen and (min-width: 600px) {
+    .nav_menu {
+        margin-right: 2.5rem;
+        
+    }
+
+    .first_car {
+        background-image: url(./large_images/teslaRed_large.jpg);
+    }
+    .second_car {
+        background-image: url(./large_images/teslaBlue_large.jpg);
+    }
+    .third_car {
+        background-image: url(./large_images/modelS_large.jpg);
+    }
+    .forth_car {
+        background-image: url(./large_images/modelX_large.jpg);
+    }
+    .solar_panel {
+        background-image: url(./large_images/solarPanel_large.jpg);
+    }
+    .solar_roof {
+        background-image: url(./large_images/solarRoof_large.jpg);
+    }
+    .accessories {
+        background-image: url(./large_images/accessories_large.jpg);
+    }
+            /* button display  */
+    .buttons {
+        display: flex;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        column-gap: 20px;
+        width: 35rem;
+        padding-top: 60vh;
+        
+    }
+    .single_btn{
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        bottom: -590vh;
+        width: 25rem;
+    }
+   
+    .footer_links, .footer_links span {
+        display: flex;
+        font-size: 13px;
+        column-gap: 1.7%;
+        
+    }
+    footer a {
+        color: rgba(0, 0, 0, 0.719);
+
+    }
+}
+@media screen and (min-width: 1200px) {
+    .nav_linksRight, .nav_linksCenter {
+        display:flex;
+    }
+    .nav_menu {
+        display: none;   
+    }
+    .header {
+        justify-content: space-between;
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 20px;
+        
+    }
+    .header a {
+        color: rgba(0, 0, 0, 0.719);
+        word-spacing: 4px;
+        
+    }
+   
+    .nav_linksCenter {
+        column-gap: 30px;
+    }
+    .nav_linksRight {
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+        padding-right: 65px;
+        
+    }
+
+}
