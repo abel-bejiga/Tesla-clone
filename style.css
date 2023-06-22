@@ -6,11 +6,19 @@
     box-sizing: border-box;
     
 }
+::-webkit-scrollbar {
+    display: none;
+}
 
+body {
+    overflow: hidden;
+    user-select: none;
+}
 body a{
     text-decoration: none;
     color: rgba(0, 0, 0, 0.87);
 }
+
  .header svg {
     max-height: 1rem;
     width: 7.5rem;
@@ -24,7 +32,7 @@ header {
  
 .header {
     display: flex;
-    margin: 10px 25px; 
+    padding: 15px 20px; 
     flex-flow: row wrap;
     justify-content: space-between;
     inline-size: 100%;
@@ -37,25 +45,123 @@ header {
 .nav_menu2 {
     display: none;
 }
-.nav_menu {
-margin-right: 2rem;
-border-radius: 5px;
-background-color: rgba(78, 78, 78, 0.123);
-height: 35px;
-width: 80px;
-display: grid;
-align-items: center;
-text-align: center;
+.nav_menu button {
+    color: #ffffffa2;
+    border-radius: 5px;
+    background-color: rgba(59, 59, 59, 0.185);
+    padding: 8px 15px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    border: none;
+    letter-spacing: 1px;
+}
+.nav_menu:active {
+    background-color: rgba(194, 193, 193, 0.322);
+    border-radius: 5px;
+
 }
 
+/* scroll snapping */
 
+.mainCont {
+    height: 100vh;
+    width: 100%;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    /* scroll-snap-stop: 0.5s; */
+    scroll-behavior: smooth;
+    /* scroll-behavior: cubic-bezier(0.4, 0, 0.2, 1); */
+  }
+  .scroll-item {
+    height: 100%;
+    scroll-snap-align: start;
+  }
 
+  .none {
+    display: none;
+  } 
+
+  .modal {
+    width: 80%;
+    height: 100vh;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    padding: 5px 5px 422px 5px;
+    overflow: scroll;
+  }
+
+  .close {
+    display: flex;
+    justify-content: flex-end;
+    height: 40px;
+    margin: 10px;
+
+  }
+
+  .close img {
+    width: 40px;  
+    padding: 10px 0;
+  }
+
+  .links {
+    display: grid;
+    margin: 20px 30px;
+    gap: 13px;
+  }
+  
+  .links a {
+    height: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: rgba(0, 0, 0, 0.651);
+  }
+  
+  .links a:nth-last-child(2){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .links a:last-child img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .links a:last-child {
+    display: flex;
+    gap: 10px;
+  }
+
+  .links a:last-child p {
+    display: grid;
+    gap: 5px;
+
+  }
+  .links a:last-child p span:last-child {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  @keyframes slideIn {
+    from{right: -40%; opacity: -1;}
+    to{right: 0; opacity: 1;}
+  }
+  @keyframes slideOut {
+      from{right: 0; opacity: 1;}
+        to{right: -40%; opacity: -1;}
+  }
+
+.slideIn {
+    animation: slideIn 0.3s ease-in backwards 1;
+}
+.slideOut {
+    animation: slideOut 0.3s ease-out forwards 1;
+}
                     /* images  */
-.first_car {
-    background-image: url(./small_images/teslaRed_small.jpg);
-
-}
-.first_car, .second_car, .third_car, .forth_car, .solar_panel, .solar_roof, .accessories {
+.first_car, .second_car, .third_car, .forth_car, .solar_panel, .solar_roof, .power_wall, .accessories {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -64,7 +170,11 @@ text-align: center;
     min-width: 400px;
     
 }
+                    
+.first_car {
+    background-image: url(./small_images/teslaRed_small.jpg);
 
+}
 .second_car {
     background-image: url(./small_images/teslaBlue_small.jpg);
 
@@ -82,6 +192,9 @@ text-align: center;
 .solar_roof {
     background-image: url(./small_images/solarRoof_small.jpg);
 }
+.power_wall {
+    background-image: url(./small_images/powerwall.jpg);
+}
 .accessories {
     background-image: url(./small_images/accessories_small.jpg);
 }
@@ -89,14 +202,14 @@ text-align: center;
 
                 /* discriptions  */
 
-.first_disc, .second_disc, .third_disc, .forth_disc, .fifth_disc, .sixth_disc, .seventh_disc {
+.first_disc, .second_disc, .third_disc, .forth_disc, .fifth_disc, .sixth_disc, .seventh_disc, .eighth_disc {
     display: grid;
     justify-content: center;
     padding-top: 15vh;
     line-height: 40px;
     
 }      
-.first_disc h1, .second_disc h1, .third_disc h1, .forth_disc h1, .fifth_disc h1, .sixth_disc h1, .seventh_disc h1{
+.first_disc h1, .second_disc h1, .third_disc h1, .forth_disc h1, .fifth_disc h1, .sixth_disc h1, .seventh_disc h1, .eighth_disc h1{
     font-size: 40px;
     font-weight: 500;
     letter-spacing: 1px;
@@ -152,6 +265,7 @@ text-align: center;
     width: 100%;
     display: grid;
     place-items: center;
+
 }
 .col2 {
     bottom: -90vh;
@@ -178,7 +292,7 @@ text-align: center;
 }
 
 
-.first_car i, .second_car i, .third_car i, .forth_car i, .solar_panel i, .solar_roof i{
+.first_car i, .second_car i, .third_car i, .forth_car i, .solar_panel i, .solar_roof i, .power_wall i{
     display: grid;
     position: absolute;
     left: 50%;
@@ -253,6 +367,9 @@ text-align: center;
     .solar_roof {
         background-image: url(./large_images/solarRoof_large.jpg);
     }
+    .power_wall {
+        background-image: url(./large_images/powerwall.jpg);
+    }
     .accessories {
         background-image: url(./large_images/accessories_large.jpg);
     }
@@ -319,3 +436,4 @@ text-align: center;
     }
 
 }
+
